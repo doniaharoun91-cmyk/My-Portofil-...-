@@ -1,0 +1,1010 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101a2c">
+<meta name="description" content="Donia Haroun — Web Developer Portfolio">
+<title>Donia Haroun | Web Developer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--navy:#101a2c;
+--navy2:#17243a;
+--copper:#c58d65;
+--cream:#f7f4ef;
+--muted:#b9c3d0;
+--line:rgba(255,255,255,.12);
+--text-soft:#c1c9d3;
+--card:rgba(255,255,255,.035);
+--contact:#0b1423;
+}
+
+body.light{
+--navy:#f7f4ef;
+--navy2:#eee8df;
+--cream:#202a38;
+--muted:#5c6673;
+--line:rgba(32,42,56,.16);
+--text-soft:#566170;
+--card:rgba(255,255,255,.65);
+--contact:#e8e1d7;
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+scroll-padding-top:85px;
+}
+
+body{
+font-family:"DM Sans",sans-serif;
+background:var(--navy);
+color:var(--cream);
+line-height:1.7;
+transition:background .3s,color .3s;
+}
+
+body[dir="rtl"]{
+font-family:"Cairo",sans-serif;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+button{
+font-family:inherit;
+}
+
+.wrap{
+width:min(1120px,90%);
+margin:auto;
+}
+
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+z-index:20;
+background:rgba(16,26,44,.95);
+backdrop-filter:blur(14px);
+border-bottom:1px solid var(--line);
+}
+
+body.light header{
+background:rgba(247,244,239,.95);
+}
+
+nav{
+min-height:76px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+.brand{
+font:600 1.35rem "Playfair Display",serif;
+letter-spacing:.04em;
+white-space:nowrap;
+}
+
+.brand span{
+color:var(--copper);
+}
+
+.navlinks{
+display:flex;
+gap:25px;
+color:#d8dce3;
+font-size:.9rem;
+}
+
+body.light .navlinks{
+color:#354052;
+}
+
+.navlinks a:hover{
+color:var(--copper);
+}
+
+.nav-actions{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.lang,.menu{
+background:transparent;
+border:1px solid rgba(197,141,101,.65);
+color:var(--cream);
+padding:9px 14px;
+border-radius:5px;
+cursor:pointer;
+font-size:.85rem;
+transition:.2s;
+}
+
+.lang:hover,.menu:hover{
+background:rgba(197,141,101,.12);
+}
+
+.menu{
+display:none;
+}
+
+/* HERO */
+
+.hero{
+min-height:590px;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:100px 0;
+text-align:center;
+}
+
+.hero-content{
+width:100%;
+max-width:850px;
+margin:auto;
+}
+
+.eyebrow,.section-label{
+color:var(--copper);
+letter-spacing:.18em;
+text-transform:uppercase;
+font-size:.76rem;
+font-weight:700;
+}
+
+body[dir="rtl"] .eyebrow,
+body[dir="rtl"] .section-label{
+letter-spacing:0;
+}
+
+h1{
+font:600 clamp(3rem,7vw,5.5rem)/1.15 "Playfair Display",serif;
+margin:22px 0;
+}
+
+body[dir="rtl"] h1,
+body[dir="rtl"] h2,
+body[dir="rtl"] .project h3{
+font-family:"Cairo",sans-serif;
+}
+
+h1 span{
+color:var(--copper);
+}
+
+.hero p,.intro{
+color:var(--text-soft);
+max-width:680px;
+font-size:1.02rem;
+margin:auto;
+}
+
+.actions{
+display:flex;
+justify-content:center;
+gap:13px;
+flex-wrap:wrap;
+margin-top:32px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:12px 23px;
+border-radius:5px;
+font-weight:700;
+font-size:.9rem;
+transition:.25s;
+cursor:pointer;
+}
+
+.primary{
+background:var(--copper);
+color:#171b22;
+}
+
+.primary:hover{
+transform:translateY(-3px);
+filter:brightness(1.08);
+}
+
+.outline{
+border:1px solid rgba(197,141,101,.7);
+color:var(--cream);
+}
+
+.outline:hover{
+background:rgba(197,141,101,.12);
+transform:translateY(-3px);
+}
+
+/* ABOUT */
+
+section{
+padding:80px 0;
+}
+
+h2{
+font:600 clamp(2rem,4vw,3rem) "Playfair Display",serif;
+margin:10px 0 16px;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:start;
+margin-top:32px;
+}
+
+.about-copy p{
+color:var(--text-soft);
+margin-bottom:15px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:13px;
+}
+
+.stat{
+padding:22px;
+border:1px solid var(--line);
+background:var(--card);
+transition:.25s;
+}
+
+.stat:hover{
+border-color:var(--copper);
+transform:translateY(-3px);
+}
+
+.stat strong{
+display:block;
+color:var(--copper);
+font:600 1.25rem "Playfair Display",serif;
+}
+
+.stat span{
+color:var(--muted);
+font-size:.85rem;
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:24px;
+}
+
+.skill{
+border:1px solid rgba(197,141,101,.35);
+padding:7px 14px;
+border-radius:30px;
+color:#e8d9ce;
+font-size:.85rem;
+}
+
+body.light .skill{
+color:#6b4934;
+}
+
+/* PROJECTS */
+
+.projects{
+background:var(--navy2);
+}
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+margin-top:32px;
+}
+
+.project{
+border:1px solid var(--line);
+padding:27px;
+background:var(--card);
+display:flex;
+flex-direction:column;
+min-height:245px;
+transition:.25s;
+}
+
+.project:hover{
+border-color:rgba(197,141,101,.7);
+transform:translateY(-5px);
+}
+
+.project small{
+color:var(--copper);
+letter-spacing:.1em;
+text-transform:uppercase;
+font-size:.7rem;
+}
+
+body[dir="rtl"] .project small{
+letter-spacing:0;
+}
+
+.project h3{
+font:600 1.5rem "Playfair Display",serif;
+margin:10px 0;
+}
+
+.project p{
+color:var(--muted);
+font-size:.92rem;
+flex:1;
+}
+
+.tags{
+display:flex;
+gap:7px;
+flex-wrap:wrap;
+margin-top:15px;
+}
+
+.tags span{
+font-size:.72rem;
+color:#d9c8bc;
+background:rgba(197,141,101,.1);
+padding:4px 9px;
+border-radius:20px;
+}
+
+.project a{
+color:var(--copper);
+font-weight:700;
+margin-top:18px;
+font-size:.9rem;
+width:fit-content;
+}
+
+.project a:hover{
+text-decoration:underline;
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+margin-top:30px;
+}
+
+.service{
+padding:25px;
+border:1px solid var(--line);
+transition:.25s;
+}
+
+.service:hover{
+border-color:var(--copper);
+transform:translateY(-4px);
+}
+
+.service .num{
+color:var(--copper);
+font:600 1.2rem "Playfair Display",serif;
+}
+
+.service h3{
+margin:12px 0 7px;
+font-size:1.05rem;
+}
+
+.service p{
+color:var(--muted);
+font-size:.9rem;
+}
+
+/* CONTACT */
+
+.contact{
+background:var(--contact);
+text-align:center;
+}
+
+body.light .contact{
+background:var(--contact);
+}
+
+.contact .intro{
+margin:auto;
+}
+
+.contact-links{
+display:flex;
+justify-content:center;
+gap:13px;
+flex-wrap:wrap;
+margin-top:28px;
+}
+
+.contact-info{
+margin-top:22px;
+color:#aeb8c6;
+font-size:.92rem;
+}
+
+body.light .contact-info{
+color:#566170;
+}
+
+/* FOOTER */
+
+footer{
+padding:23px 0;
+text-align:center;
+color:#8e9aaa;
+font-size:.82rem;
+border-top:1px solid var(--line);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.navlinks{
+gap:15px;
+font-size:.82rem;
+}
+
+.hero{
+min-height:520px;
+}
+
+}
+
+@media(max-width:760px){
+
+.navlinks{
+display:none;
+position:absolute;
+top:76px;
+inset-inline:0;
+background:var(--navy);
+padding:22px 5%;
+flex-direction:column;
+gap:16px;
+border-bottom:1px solid var(--line);
+}
+
+.navlinks.open{
+display:flex;
+}
+
+.menu{
+display:block;
+}
+
+.hero{
+min-height:500px;
+padding:85px 0;
+}
+
+h1{
+font-size:clamp(2.7rem,12vw,4rem);
+}
+
+.about-grid,
+.project-grid{
+grid-template-columns:1fr;
+}
+
+.services-grid{
+grid-template-columns:1fr;
+}
+
+section{
+padding:62px 0;
+}
+
+.stats{
+gap:10px;
+}
+
+.stat{
+padding:17px;
+}
+
+}
+
+@media(max-width:380px){
+
+.brand{
+font-size:1.1rem;
+}
+
+.nav-actions{
+gap:6px;
+}
+
+.lang,.menu{
+padding:8px 10px;
+font-size:.78rem;
+}
+
+.actions .btn{
+width:100%;
+}
+
+}
+</style>
+</head>
+
+<body dir="ltr">
+
+<header>
+<div class="wrap">
+<nav>
+
+<a class="brand" href="#home">DONIA <span>HAROUN</span></a>
+
+<div class="navlinks" id="navlinks">
+<a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+<a href="#about" data-en="About" data-ar="من أنا">About</a>
+<a href="#projects" data-en="Projects" data-ar="أعمالي">Projects</a>
+<a href="#services" data-en="Services" data-ar="الخدمات">Services</a>
+<a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+</div>
+
+<div class="nav-actions">
+<button class="lang" id="themeBtn">🌙 Dark</button>
+<button class="lang" id="langBtn">عربي</button>
+<button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+</div>
+
+</nav>
+</div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="wrap hero" id="home">
+<div class="hero-content">
+
+<div class="eyebrow"
+data-en="WEB DEVELOPER · CREATIVE BUILDER"
+data-ar="مطورة ويب · صناعة تجارب رقمية">
+WEB DEVELOPER · CREATIVE BUILDER
+</div>
+
+<h1
+data-en="Hi, I'm<br><span>Donia</span> Haroun."
+data-ar="أهلاً، أنا<br><span>دنيا</span> هارون.">
+Hi, I'm<br><span>Donia</span> Haroun.
+</h1>
+
+<p
+data-en="I build modern, responsive websites that help brands stand out, showcase their products, and connect with more customers. Let's turn your idea into a digital experience."
+data-ar="أصمم وأطور مواقع ويب عصرية ومتجاوبة تساعد الشركات وأصحاب المشاريع على التميز وعرض منتجاتهم وخدماتهم والتواصل مع العملاء. لنحول فكرتك إلى تجربة رقمية مميزة.">
+I build modern, responsive websites that help brands stand out, showcase their products, and connect with more customers. Let's turn your idea into a digital experience.
+</p>
+
+<div class="actions">
+<a class="btn primary" href="#projects"
+data-en="Explore My Work ↗"
+data-ar="استكشف أعمالي ↗">
+Explore My Work ↗
+</a>
+
+<a class="btn outline" href="#contact"
+data-en="Let's Talk"
+data-ar="لنتواصل">
+Let's Talk
+</a>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+<div class="wrap">
+
+<div class="section-label"
+data-en="A LITTLE ABOUT ME"
+data-ar="نبذة عني">
+A LITTLE ABOUT ME
+</div>
+
+<h2 data-en="More Than Just Code"
+data-ar="مش مجرد كتابة كود">
+More Than Just Code
+</h2>
+
+<p class="intro"
+data-en="I combine design, functionality, and attention to detail to create useful online experiences."
+data-ar="أجمع بين التصميم والوظائف العملية والاهتمام بالتفاصيل لتقديم تجارب رقمية مفيدة وسهلة الاستخدام.">
+I combine design, functionality, and attention to detail to create useful online experiences.
+</p>
+
+<div class="about-grid">
+
+<div class="about-copy">
+
+<p
+data-en="I'm Donia Haroun, a web developer who enjoys building attractive websites for businesses and personal brands. I focus on clear layouts, mobile-friendly experiences, and designs that make it easy for visitors to take action."
+data-ar="أنا دنيا هارون، مطورة ويب أعمل على إنشاء مواقع جذابة للشركات والعلامات التجارية والمشروعات المختلفة. أركز على تنظيم المحتوى، وتجربة استخدام مريحة على الموبايل، وتصميم يساعد الزوار على الوصول إلى ما يحتاجونه بسهولة.">
+I'm Donia Haroun, a web developer who enjoys building attractive websites for businesses and personal brands. I focus on clear layouts, mobile-friendly experiences, and designs that make it easy for visitors to take action.
+</p>
+
+<p
+data-en="I'm continuously learning and improving my skills, exploring new ways to make every project clearer, faster, and more useful."
+data-ar="أعمل باستمرار على تطوير مهاراتي واكتشاف طرق جديدة لجعل كل مشروع أكثر وضوحًا وسرعة وفاعلية.">
+I'm continuously learning and improving my skills, exploring new ways to make every project clearer, faster, and more useful.
+</p>
+
+<div class="skills">
+<span class="skill">HTML5</span>
+<span class="skill">CSS3</span>
+<span class="skill">JavaScript</span>
+<span class="skill">Responsive UI</span>
+<span class="skill">E-commerce</span>
+<span class="skill">UI / UX</span>
+<span class="skill">GitHub Pages</span>
+<span class="skill">Arabic & English</span>
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<strong>HTML5</strong>
+<span data-en="Website Structure" data-ar="بناء صفحات الويب">Website Structure</span>
+</div>
+
+<div class="stat">
+<strong>CSS3</strong>
+<span data-en="Styling & Layout" data-ar="التنسيق والتصميم">Styling & Layout</span>
+</div>
+
+<div class="stat">
+<strong>JavaScript</strong>
+<span data-en="Interactive Elements" data-ar="العناصر التفاعلية">Interactive Elements</span>
+</div>
+
+<div class="stat">
+<strong>Responsive</strong>
+<span data-en="Mobile-First Design" data-ar="تصميم مناسب للموبايل">Mobile-First Design</span>
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+
+<section class="projects" id="projects">
+<div class="wrap">
+
+<div class="section-label"
+data-en="SELECTED WORK"
+data-ar="نماذج من أعمالي">
+SELECTED WORK
+</div>
+
+<h2 data-en="Projects I've Built"
+data-ar="مشاريع نفذتها">
+Projects I've Built
+</h2>
+
+<p class="intro"
+data-en="Explore my websites for different industries. Open any live project to see it in action."
+data-ar="مجموعة من المواقع التي نفذتها لمجالات مختلفة. يمكن استكشاف أي مشروع ومشاهدته بشكل مباشر.">
+Explore my websites for different industries.
+</p>
+
+<div class="project-grid">
+
+<article class="project">
+<small data-en="Restaurant Website" data-ar="موقع مطعم">Restaurant Website</small>
+<h3>Karam El Sham</h3>
+<p data-en="A restaurant website concept designed to present the brand, showcase its menu, offers, branches, and online ordering experience."
+data-ar="تصميم موقع لمطعم يعرض هوية العلامة التجارية والمنيو والعروض والفروع، مع تجربة واضحة لاستكشاف الطعام والطلب أونلاين.">
+A restaurant website concept designed to present the brand, showcase its menu, offers, branches, and online ordering experience.
+</p>
+<div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Restaurant</span></div>
+<a href="https://doniaharoun91-cmyk.github.io/LAVORA/" target="_blank" rel="noopener" data-en="View Live Website ↗" data-ar="مشاهدة الموقع ↗">View Live Website ↗</a>
+</article>
+
+<article class="project">
+<small data-en="Cafe Website" data-ar="موقع كافيه">Cafe Website</small>
+<h3>NOIR Café</h3>
+<p data-en="A specialty coffee website with a warm visual identity, menu browsing, product categories, and a welcoming café experience."
+data-ar="موقع لكافيه بهوية دافئة، يعرض المنيو وتصنيفات المشروبات ويقدم تجربة مريحة تعكس أجواء المكان.">
+A specialty coffee website with a warm visual identity, menu browsing, product categories, and a welcoming café experience.
+</p>
+<div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Café</span></div>
+<a href="https://doniaharoun91-cmyk.github.io/my-coffee-/" target="_blank" rel="noopener" data-en="View Live Website ↗" data-ar="مشاهدة الموقع ↗">View Live Website ↗</a>
+</article>
+
+<article class="project">
+<small data-en="Online Store" data-ar="متجر إلكتروني">Online Store</small>
+<h3>WIKA Accessories</h3>
+<p data-en="An accessories storefront concept focused on product presentation, bilingual content, and a convenient shopping journey."
+data-ar="متجر إكسسوارات يركز على عرض المنتجات بشكل جذاب، ومحتوى باللغتين، وتجربة تسوق سهلة.">
+An accessories storefront concept focused on product presentation, bilingual content, and a convenient shopping journey.
+</p>
+<div class="tags"><span>E-commerce</span><span>Arabic / English</span><span>Product UI</span></div>
+<a href="https://doniaharoun91-cmyk.github.io/-wika..-accessories/" target="_blank" rel="noopener" data-en="View Live Website ↗" data-ar="مشاهدة الموقع ↗">View Live Website ↗</a>
+</article>
+
+<article class="project">
+<small data-en="Luxury Watch Website" data-ar="موقع ساعات فاخرة">Luxury Watch Website</small>
+<h3>ChronoLux</h3>
+<p data-en="A luxury watch magazine and showcase featuring iconic timepieces, brand stories, reviews, and an elegant editorial style."
+data-ar="موقع ومجلة للساعات الفاخرة يعرض أشهر الموديلات والعلامات التجارية والمراجعات بأسلوب تحريري أنيق.">
+A luxury watch magazine and showcase featuring iconic timepieces, brand stories, reviews, and an elegant editorial style.
+</p>
+<div class="tags"><span>Luxury UI</span><span>Product Showcase</span><span>Responsive</span></div>
+<a href="https://doniaharoun91-cmyk.github.io/chronolux-luxury-watch-/" target="_blank" rel="noopener" data-en="View Live Website ↗" data-ar="مشاهدة الموقع ↗">View Live Website ↗</a>
+</article>
+
+<article class="project">
+<small data-en="Furniture Showroom" data-ar="معرض أثاث">Furniture Showroom</small>
+<h3>LUXORA Furniture</h3>
+<p data-en="A modern furniture showroom website featuring product collections, category browsing, a shopping cart, and WhatsApp inquiries."
+data-ar="موقع معرض أثاث عصري يعرض المجموعات والمنتجات وتصنيفاتها، مع سلة اختيارات وإمكانية الاستفسار عبر واتساب.">
+A modern furniture showroom website featuring product collections, category browsing, a shopping cart, and WhatsApp inquiries.
+</p>
+<div class="tags"><span>Furniture</span><span>Product Gallery</span><span>Web Design</span></div>
+<a href="https://doniaharoun91-cmyk.github.io/Foundation-Exhibition-/" target="_blank" rel="noopener" data-en="View Live Website ↗" data-ar="مشاهدة الموقع ↗">View Live Website ↗</a>
+</article>
+
+<article class="project">
+<small data-en="Fitness · Gym Website" data-ar="موقع جيم ولياقة بدنية">Fitness · Gym Website</small>
+<h3>EXTREME GYM</h3>
+<p data-en="A bold gym website showcasing memberships, training schedules, facilities, and payment options with a strong black-and-gold visual identity."
+data-ar="موقع جيم بتصميم أسود وذهبي قوي، يعرض الاشتراكات ومواعيد التمرين والخدمات وطرق الدفع بشكل احترافي.">
+A bold gym website showcasing memberships, training schedules, facilities, and payment options with a strong black-and-gold visual identity.
+</p>
+<div class="tags"><span>Gym</span><span>Business Website</span><span>Responsive</span></div>
+<a href="https://tinyurl.com/extremegym-Google" target="_blank" rel="noopener" data-en="View Live Website ↗" data-ar="مشاهدة الموقع ↗">View Live Website ↗</a>
+</article>
+
+<article class="project">
+<small data-en="Technology · Retail Website" data-ar="موقع خدمات ومتجر تقني">Technology · Retail Website</small>
+<h3>FOX STORE</h3>
+<p data-en="A modern website for mobile and computer services, designed to present products and services in a clear, customer-friendly way."
+data-ar="موقع عصري لخدمات الموبايل والكمبيوتر، يعرض المنتجات والخدمات بشكل منظم وسهل للعميل.">
+A modern website for mobile and computer services, designed to present products and services in a clear, customer-friendly way.
+</p>
+<div class="tags"><span>Retail</span><span>Technology</span><span>Responsive</span></div>
+<a href="https://doniaharoun91-cmyk.github.io/fox-Store-..-/" target="_blank" rel="noopener" data-en="View Live Website ↗" data-ar="مشاهدة الموقع ↗">View Live Website ↗</a>
+</article>
+
+<article class="project">
+<small data-en="Your Next Project" data-ar="مشروعك القادم">Your Next Project</small>
+<h3 data-en="Let's Build It Together" data-ar="لننفذه معًا">Let's Build It Together</h3>
+<p data-en="Have a business or an idea that needs a website? Let's create a digital experience that fits your brand."
+data-ar="هل لديك مشروع أو فكرة تحتاج إلى موقع إلكتروني؟ لنعمل معًا على تصميم تجربة رقمية تناسب هوية مشروعك.">
+Have a business or an idea that needs a website? Let's create a digital experience that fits your brand.
+</p>
+<a href="#contact" data-en="Start a Project ↗" data-ar="ابدأ مشروعك ↗">Start a Project ↗</a>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+<div class="wrap">
+
+<div class="section-label"
+data-en="WHAT I CAN DO"
+data-ar="الخدمات">
+WHAT I CAN DO
+</div>
+
+<h2 data-en="Services" data-ar="خدماتي">Services</h2>
+
+<p class="intro"
+data-en="Simple, professional web solutions designed around your goals."
+data-ar="حلول ويب احترافية وبسيطة مصممة حسب أهداف مشروعك.">
+Simple, professional web solutions designed around your goals.
+</p>
+
+<div class="services-grid">
+
+<article class="service">
+<div class="num">01</div>
+<h3 data-en="Business Websites" data-ar="مواقع الشركات والمشروعات">Business Websites</h3>
+<p data-en="Professional websites that introduce your business and help customers reach you."
+data-ar="مواقع احترافية تعرف العملاء بنشاطك التجاري وتسهل عليهم التواصل معك.">
+Professional websites that introduce your business and help customers reach you.
+</p>
+</article>
+
+<article class="service">
+<div class="num">02</div>
+<h3 data-en="Landing Pages & Stores" data-ar="صفحات الهبوط والمتاجر">Landing Pages & Stores</h3>
+<p data-en="Focused pages and online storefronts for products, services, and campaigns."
+data-ar="صفحات مخصصة ومتاجر إلكترونية لعرض المنتجات والخدمات والحملات.">
+Focused pages and online storefronts for products, services, and campaigns.
+</p>
+</article>
+
+<article class="service">
+<div class="num">03</div>
+<h3 data-en="Responsive Design" data-ar="تصميم متجاوب">Responsive Design</h3>
+<p data-en="Websites designed to work smoothly on phones, tablets, and desktop screens."
+data-ar="مواقع تعمل بشكل مريح ومتناسق على الموبايل والتابلت والكمبيوتر.">
+Websites designed to work smoothly on phones, tablets, and desktop screens.
+</p>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+<div class="wrap">
+
+<div class="section-label"
+data-en="LET'S WORK TOGETHER"
+data-ar="لنعمل معًا">
+LET'S WORK TOGETHER
+</div>
+
+<h2 data-en="Have a Project in Mind?"
+data-ar="هل لديك مشروع في ذهنك؟">
+Have a Project in Mind?
+</h2>
+
+<p class="intro"
+data-en="Need a website for your business, store, or personal brand? Tell me what you have in mind and let's discuss your project."
+data-ar="هل تحتاج إلى موقع لعملك أو متجرك أو علامتك التجارية؟ أرسل تفاصيل فكرتك لنتناقش حول مشروعك.">
+Need a website for your business, store, or personal brand? Tell me what you have in mind and let's discuss your project.
+</p>
+
+<div class="contact-links">
+
+<a class="btn primary"
+href="https://wa.me/201141654852"
+target="_blank"
+rel="noopener"
+data-en="Message Me on WhatsApp"
+data-ar="تواصل عبر واتساب">
+Message Me on WhatsApp
+</a>
+
+<a class="btn outline"
+href="https://www.instagram.com/doniaWebSite/"
+target="_blank"
+rel="noopener">
+Instagram ↗
+</a>
+
+</div>
+
+<p class="contact-info">
+01141654852 · doniaharoun91@gmail.com
+</p>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+© <span id="year"></span> Donia Haroun.
+<span data-en="Designed & Built with care."
+data-ar="تصميم وتنفيذ بكل اهتمام.">
+Designed & Built with care.
+</span>
+</footer>
+
+<script>
+const langBtn=document.getElementById('langBtn');
+const themeBtn=document.getElementById('themeBtn');
+const body=document.body;
+const navlinks=document.getElementById('navlinks');
+
+let lang='en';
+
+/* THEME */
+
+function setTheme(theme){
+
+body.classList.toggle('light',theme==='light');
+
+try{
+localStorage.setItem('donia-theme',theme);
+}catch(e){}
+
+themeBtn.textContent='🌙 '+(theme==='light'?'Dark':'Light');
+
+}
+
+let savedTheme='dark';
+
+try{
+savedTheme=localStorage.getItem('donia-theme')||'dark';
+}catch(e){}
+
+setTheme(savedTheme);
+
+themeBtn.addEventListener('click',()=>{
+setTheme(
+body.classList.contains('light')?'dark':'light'
+);
+});
+
+/* LANGUAGE */
+
+function setLanguage(next){
+
+lang=next;
+
+body.dir=lang==='ar'?'rtl':'ltr';
+document.documentElement.lang=lang;
+
+document.querySelectorAll('[data-en][data-ar]').forEach(el=>{
+el.innerHTML=el.dataset[lang];
+});
+
+langBtn.textContent=lang==='en'?'عربي':'English';
+
+}
+
+langBtn.addEventListener('click',()=>{
+setLanguage(lang==='en'?'ar':'en');
+});
+
+/* MOBILE MENU */
+
+document.getElementById('menuBtn').addEventListener('click',()=>{
+navlinks.classList.toggle('open');
+});
+
+navlinks.querySelectorAll('a').forEach(a=>{
+a.addEventListener('click',()=>{
+navlinks.classList.remove('open');
+});
+});
+
+/* CURRENT YEAR */
+
+document.getElementById('year').textContent=
+new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
